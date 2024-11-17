@@ -8,9 +8,15 @@ namespace JobCandidateProject.Repository.JobCandidateRepo
 {
     public class JobCandidateService : IJobCandidateService
     {
-        public Task<JobCandidateDTO> CreateUpdateCandidate(JobCandidateDTO data)
+        IJobCandidateRepository _repo;
+
+        public JobCandidateService(IJobCandidateRepository repo)
         {
-            throw new NotImplementedException();
+            _repo = repo;
+        }
+        public async Task<JobCandidateDTO> CreateUpdateCandidate(JobCandidateDTO data)
+        {
+            return await _repo.CreateUpdateCandidate(data);
         }
     }
 }
