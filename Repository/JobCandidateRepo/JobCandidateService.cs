@@ -14,8 +14,13 @@ namespace JobCandidateProject.Repository.JobCandidateRepo
         {
             _repo = repo;
         }
-        public async Task<JobCandidateDTO> CreateUpdateCandidate(JobCandidateDTO data)
+        public async Task<List<JobCandidateDTO>> CreateUpdateCandidate(List<JobCandidateDTO> data)
         {
+            if(data.GroupBy(dto=> dto.Email).Where(s=> s.Count() > 1).Count() > 0)
+            {
+                throw new Exception("Duplicate email found.");
+            }
+            
             return await _repo.CreateUpdateCandidate(data);
         }
     }

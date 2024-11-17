@@ -8,6 +8,6 @@ namespace JobCandidateProject.Repository.JobCandidateRepo
 {
     public interface IJobCandidateService
     {
-        public Task<JobCandidateDTO> CreateUpdateCandidate(JobCandidateDTO data);
+        public Task<List<JobCandidateDTO>> CreateUpdateCandidate(List<JobCandidateDTO> data);
     }
 }

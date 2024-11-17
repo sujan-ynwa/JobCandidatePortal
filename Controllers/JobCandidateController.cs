@@ -20,16 +20,14 @@ namespace JobCandidateProject.Controllers
 
         [HttpPost]
         [Route("CreateUpdateCandidate")]
-        public async Task<JobCandidateDTO> CreateUpdateCandidate([FromBody] JobCandidateDTO data)
+        public  IActionResult CreateUpdateCandidate([FromBody] List<JobCandidateDTO> data)
         {
             if (ModelState.IsValid)
-            {              
-                return await  _service.CreateUpdateCandidate(data);                
-               // return "Success";
+            {
+                return Ok(_service.CreateUpdateCandidate(data));
             }else
             {
-
-                return null;
+                return BadRequest();
             }
 
         }
