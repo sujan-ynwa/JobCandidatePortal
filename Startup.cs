@@ -31,7 +31,7 @@ namespace JobCandidateProject
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(options =>options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore); 
             // Configure DbContext with PostgreSQL connection
             services.AddDbContext<AppDbContext>(options =>
             options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
@@ -45,6 +45,8 @@ namespace JobCandidateProject
             //services.AddApiExplorer();
             services.AddSwaggerGen();
             //services.AddExceptionHandler<GlobalExceptionMiddleware>();
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             services.Configure<ApiBehaviorOptions>(options =>
             {

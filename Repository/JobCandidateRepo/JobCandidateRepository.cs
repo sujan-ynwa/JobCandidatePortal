@@ -1,5 +1,6 @@
 ﻿using JobCandidateProject.Models;
 using JobCandidateProject.Models.JobCandidate;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,7 @@ namespace JobCandidateProject.Repository.JobCandidateRepo
             //get the remaining data for insert
             var candidates_for_insert = data.Where(dto => !candidates_for_update.Any(candidate => candidate.Email.ToLower() == dto.Email.ToLower())).ToList();
 
+            //_dbContext.Database.ExecuteSqlCommand("TRUNCATE TABLE Jobcandidate");
 
             if (candidates_for_update.Count() > 0) // update the user if already exists
             {

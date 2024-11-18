@@ -44,3 +44,5 @@ D:\.net Repository\JobCandidateProject\bin\Debug\netcoreapp3.1\WebActivatorEx.dl
 D:\.net Repository\JobCandidateProject\obj\Debug\netcoreapp3.1\JobCandidateProject.MvcApplicationPartsAssemblyInfo.cs
 D:\.net Repository\JobCandidateProject\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
 D:\.net Repository\JobCandidateProject\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.dll
+D:\.net Repository\JobCandidateProject\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\.net Repository\JobCandidateProject\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
