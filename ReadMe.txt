@@ -3,7 +3,7 @@
 -- Api endpoint = /api/JobCandidate/CreateUpdateCandidate
 -- This project uses .net core 3.1 
 
-Improvements 
+Improvements Needed
 --Custom Response/ Request class to handle incoming and outgoing Responses.
 -- Logging of Error in db/file.
 -- Better Exception handling.
@@ -12,3 +12,7 @@ Improvements
 -- User Authentication
 -- Upgrade to latest .net version.
 -- Adding more data validation and customized error for model validations
+
+
+Total time spend 
+--appox 8hrs
