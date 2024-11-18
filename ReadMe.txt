@@ -4,7 +4,7 @@
 -- This project uses .net core 3.1 
 
 Improvements 
---Custom Response/ Request class to handle incoming and outgoing Resposnses.
+--Custom Response/ Request class to handle incoming and outgoing Responses.
 -- Logging of Error in db/file.
 -- Better Exception handling.
 -- Adding other methods list remove/ getbyid/email, getAlldata etc
